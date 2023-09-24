@@ -1,0 +1,7 @@
+Kadane's Algorithm is not part of the Sliding Window Technique. While both Kadane's Algorithm and the Sliding Window Technique deal with subarrays or subsequences, they serve different purposes and solve different types of problems:
+
+- **Kadane's Algorithm**: This algorithm specifically aims to find the maximum sum of a contiguous subarray within an array of numbers. It focuses on identifying the maximum sum among all possible contiguous subarrays. Kadane's Algorithm is particularly useful for problems where you need to find the subarray with the maximum sum, such as the "Maximum Subarray Sum" problem.
+
+- **Sliding Window Technique**: The Sliding Window Technique, as explained earlier, is a general approach for solving problems that involve arrays or sequences. It uses a "window" to explore and evaluate different parts of the array efficiently. While it can also be used to find subarrays with specific properties (e.g., maximum sum subarray, longest substring without repeating characters), it encompasses a broader range of problems and conditions. The technique involves sliding a window through the array and adjusting its size based on certain criteria.
+
+In summary, Kadane's Algorithm is a specific algorithm tailored for finding the maximum subarray sum, whereas the Sliding Window Technique is a more general strategy used for solving a variety of problems that involve subarrays or subsequences with specific properties. While both techniques are related to subarrays, they are distinct in their approaches and applications.
