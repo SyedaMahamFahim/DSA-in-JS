@@ -24,8 +24,9 @@ function printFirstNegativeInteger(n, k, arr) {
   let i = 0,
     j = 0;
   let nL = [];
+
+  let ans = 0;
   while (j < n) {
-    
     if (arr[j] < 0) {
       nL.push(arr[j]);
     }
@@ -33,12 +34,11 @@ function printFirstNegativeInteger(n, k, arr) {
     if (j - i + 1 < k) {
       j++;
     } else if (j - i + 1 === k) {
-      if (nL.length > 0) {
-        console.log(nL[0]);
-      } else {
-        console.log(0);
+      if (nL.length < 0) {
+        return 0;
       }
-
+      
+      ans = nL[0];
       // Remove first element of previous window
       if (arr[i] < 0) {
         nL.shift();
@@ -49,9 +49,10 @@ function printFirstNegativeInteger(n, k, arr) {
       j++;
     }
   }
+  return ans;
 }
 
 let n = 5;
 let arr = [-8, 2, 3, -6, 10];
 let k = 2;
-printFirstNegativeInteger(n, k, arr);
+console.log(printFirstNegativeInteger(n, k, arr));
