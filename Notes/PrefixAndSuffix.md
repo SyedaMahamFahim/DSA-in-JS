@@ -1,5 +1,3 @@
-In the context of data structures and algorithms (DSA), "prefix" and "suffix" typically refer to substrings of a given string.
-
 ### Prefix:
 In DSA, a prefix of a string is any substring that includes the characters from the beginning of the string up to a certain index. For example, in the string "abcdef", the prefixes would be:
 - Prefix at index 0: "a"
@@ -18,7 +16,14 @@ Similarly, a suffix of a string is any substring that includes the characters fr
 - Suffix at index 4: "ef"
 - Suffix at index 5: "f"
 
-### Applications:
-- Prefixes and suffixes are commonly used in string algorithms and problems. For example, when dealing with pattern matching, you might need to compare prefixes or suffixes of strings to search for matches.
-- In problems involving dynamic programming, prefixes and suffixes can be useful for storing intermediate results and optimizing computations.
-- They are also important in algorithms like suffix arrays and suffix trees, which are used for efficient string searching and manipulation.
+### Working
+For ones, who did not understand how prefix-postfix works, lets change 1, 2, 3, 4 positions to symbols like a, b, c, d, so multiplying will be:
+prefix:
+->
+|       a       |   a*b   | a*b*c | a*b*c*d |
+postfix:
+<-
+| a*b*c*d | b*c*d |   c*d   |      d        |
+
+the result is a multiply without the symbol in own position (the left value from prefix and the right one from postfix):
+|    b*c*d  | a*c*d | a*b*d |   a*b*c   |
